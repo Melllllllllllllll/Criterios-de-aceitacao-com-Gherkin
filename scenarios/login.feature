@@ -11,10 +11,10 @@
 
             Esquema do Cenário: Validar acesso na plataforma da EBAC-SHOP
             Quando ele inserir os dados que sejam <validos> ou <invalidos>
-            Então deve retornar: direcionado para <tela de checkout> ou <usuario ou senha invalidos>
+            Então deve ser retornado uma <acao> para tela de checkout ou retornar uma mensagem de erro
 
             Exemplos:
-            | Usuário             | senha       | tela                         |
+            | Usuário             | senha       | ação                         |
             | "maria@ebac.com.br" | "senha4569" | "tela de checkout"           |
             | "joão@@ebac.com.br" | "senha7889" | "usuario ou senha invalidos" |
 
