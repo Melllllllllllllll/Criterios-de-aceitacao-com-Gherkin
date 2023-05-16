@@ -9,31 +9,30 @@
 
 
             Esquema do Cenário: Validar cadastro obrigatório que estão com asteriscos
-            Quando o <cliente> preencher todos os <campos que possui astersicos>
-            Então sua <compra> deve ser permitida
+            Quando o cliente preencher os campos que possui asteriscos: <nome>, <sobrenome>, <pais>, <cidade>, <telefone> e <e-mail>
+            Então sua <compra> deve ser finalizada
 
             Exemplos:
-            | cliente               | campos que possui asteriscos |  | compra             |
-            | "juliana@ebac.com.br" | "campos preenchidos"         |  | "compra permitida" |
-            | "lucas@ebac.com.br"   | "campoos não preenchidos"    |  | "compra negada"    |
+            | Nome  | Sobrenome | país   | cidade    | telefone | e-mail                  | compra     |
+            | Ana   | maria     | Brasil | fortaleza | 89384320 | ana.maria@ebac.com.br   | finalizada |
+            | lucas | pedro     | Brasil | teresina  | 89657325 | lucas.pedro@ebac.com.br | Finalizada |
+
+
 
 
             Esquema do Cenário:Validar a mesnagem de alerta para o cadastro com campos vázios
-            Quando o <cliente> deixar alguns <campos> vazios
+            Quando o cliente deixar um dos seguintes campos vazios: <nome>, <sobrenome>, <pais>, <cidade>, <telefone> e <e-mail>
             Então deve ser emitido uma <menssagem de alerta>
 
             Exemplos:
-            | cliente             | Campos                     | mensagem de alerta         |
-            | "ana@ebac.com.br"   | "campo vazio"              | "campo não pode ser vazio" |
-            | "maria@ebac.com.br" | "todos campos preenchidos" | "cadastro realizado"       |
+            | Nome | Sobrenome | país   | cidade         | telefone | e-mail                  | mensagem de alerta   |
+            | Bia  | Medeiros  | Brasil | Belo Horizonte | 99884573 |                         | possui campos vazios |
+            | João | Aguiar    | Brasil |                | 98453254 | joao.aguiar@ebac.com.br | possui campos vazios |
+            
 
+            Cenário: Validar mensagem de erro para e-mail inválidos 
+            Quando ele preencher o campo e-mail é esteja com formato inválidos 
+            Então deve ser emitido uma mensagem de erro 
 
-            Esquema do Cenário: Validar autenticação inválidas
-            Quando ele inserir <e-mail>  e <senha> com dados invalidos
-            Então deve  exibir uma <mensagem> de erro
-
-            Exemplos:
-            | usuário               | senha       | mensagem                            |
-            | "mellu@ebac.com.br"   | "senha3236" | "usuário ou senha inválidos"        |
-            | "lucsasa@ebac.com.br" | "$%%#"      | "usuário ou senha inválidos"        |
-            | "pedro@gmail.com.br"  | "ml323654"  | "usuário sem cadastro na EBAC-SHOP" |
+         
+           

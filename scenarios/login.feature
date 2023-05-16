@@ -7,16 +7,20 @@
 
             Contexto:Dado quando o usuário logar no site da EBAC-SHOP
 
+            Cenário: Validar autenticação inválidas 
+            Quando ele inserir seu login "maria@@#ebac.com"
+            E senha "mari@ebc125"
+            Então deve exibir uma mensagem de alerta “Usuário ou senha inválidos”
 
-
-            Esquema do Cenário: Validar acesso na plataforma da EBAC-SHOP
-            Quando ele inserir os dados que sejam <validos> ou <invalidos>
-            Então deve ser retornado uma <acao> para tela de checkout ou retornar uma mensagem de erro
+            Esquema do Cenário: Autenticação Válida 
+            Quando ele inserir seu <login> e <senha> que sejam validos
+            Então deve ser retornado uma <mensagem> para tela de checkout
 
             Exemplos:
-            | Usuário             | senha       | ação                         |
-            | "maria@ebac.com.br" | "senha4569" | "tela de checkout"           |
-            | "joão@@ebac.com.br" | "senha7889" | "usuario ou senha invalidos" |
+            | login               | senha      | mensagem           |
+            | "ana@ebac.com.br"   | "@ebac123" | "Tela de checkout" |
+            | "maria@ebac.com.br" | '122@ebac" | "Tela de checkout" |
+
 
 
 

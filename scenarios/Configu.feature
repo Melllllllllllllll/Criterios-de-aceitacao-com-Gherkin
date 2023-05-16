@@ -23,12 +23,12 @@
 
 
             Esquema do Cenário: Permitir apenas 10 produtos por venda
-            Quando o usuario selecionar a <quantidade> de <produto> e for <maior que 10>
-            Então deve ser emitido uma mensagem "Só é permitido 10 produtos por venda"
+            Quando o <usuario> selecionar a <quantidade> de <produto> e for maior que 10
+            Então deve ser emitido uma <mensagem> "Só é permitido 10 produtos por venda"
 
             Exemplos:
 
-            | produto   | quantidade | maior que 10 | mensagem de alerta                     |
-            | "blusa"   | "10"       | "não"        | "Produto adicionado no carrinho"       |
-            | "vestido" | "14"       | "sim"        | "Só é permitido 10 produtos por venda" |
-            | "camisa"  | "8"        | "não"        | "Produto adicionado no carrinho"       |
+            | usuario           | produto   | quantidade | mensagem                               |
+            | ana@ebac.com.br   | "blusa"   | "10"       | "Produto adicionado no carrinho"       |
+            | maria@ebac.com.br | "vestido" | "14"       | "Só é permitido 10 produtos por venda" |
+            | luca@ebac.com.br  | "camisa"  | "8"        | "Produto adicionado no carrinho"       |
